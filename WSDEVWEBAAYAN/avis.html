@@ -1,0 +1,113 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Avis - Lebonplan</title>
+</head>
+<body>
+
+    <header>
+        <img src="images/logo.webp" alt="Logo Lebonplan">
+        <nav>
+            <ul>
+                <li><a href="site.html">Accueil</a></li>
+                <li><a href="a-propos.html">À propos</a></li>
+                <li><a href="inscription.html">Inscription</a></li>
+                <li><a href="connexion.html">Connexion</a></li>
+                <li><a href="avis.html">Avis</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <h1>Votre avis nous intéresse</h1>
+        
+        <section>
+            <h2>Description</h2>
+            <form action="#" method="POST" enctype="multipart/form-data">
+                
+                <div>
+                    <label for="nom_complet">Nom complet :</label>
+                    <input type="text" id="nom_complet" name="nom_complet" required>
+                </div>
+                <br>
+                <div>
+                    <label for="email_avis">Courriel :</label>
+                    <input type="email" id="email_avis" name="email_avis" required>
+                </div>
+
+                <hr>
+
+                <div>
+                    <label for="objet">Objet de la demande :</label>
+                    <select id="objet" name="objet">
+                        <option value="produit">Produit acheté</option>
+                        <option value="commercial">Service commercial</option>
+                        <option value="technique">Service technique</option>
+                        <option value="autres">Autres</option>
+                    </select>
+                </div>
+
+                <br>
+
+                <fieldset>
+                    <legend>Catégories concernées :</legend>
+                    <input type="checkbox" id="immobilier" name="categorie" value="immobilier">
+                    <label for="immobilier">Immobilier</label><br>
+                    
+                    <input type="checkbox" id="vehicules" name="categorie" value="vehicules">
+                    <label for="vehicules">Véhicules</label><br>
+                    
+                    <input type="checkbox" id="vetements" name="categorie" value="vetements">
+                    <label for="vetements">Vêtements</label><br>
+                    
+                    <input type="checkbox" id="multimedia" name="categorie" value="multimedia">
+                    <label for="multimedia">Multimédia</label>
+                    </fieldset>
+
+                <br>
+
+                <div>
+                    <label for="photo_produit">Joindre une photo du produit :</label>
+                    <input type="file" id="photo_produit" name="photo_produit">
+                </div>
+
+                <br>
+
+                <fieldset>
+                    <legend>Êtes-vous satisfait ?</legend>
+                    <input type="radio" id="satisfait" name="satisfaction" value="oui">
+                    <label for="satisfait">Satisfait</label>
+                    
+                    <input type="radio" id="pas_satisfait" name="satisfaction" value="non">
+                    <label for="pas_satisfait">Pas satisfait</label>
+                </fieldset>
+
+                <br>
+
+                <div>
+                    <label for="commentaires">Commentaires :</label><br>
+                    <textarea id="commentaires" name="commentaires" rows="5" cols="40"></textarea>
+                </div>
+
+                <br>
+
+                <div>
+                    <button type="submit">Envoyer</button>
+                    <button type="reset">Effacer</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Lebonplan</p>
+    </footer>
+
+</body>
+</html>
