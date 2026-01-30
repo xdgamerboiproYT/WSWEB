@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+</head>
+<body>
+
+    <h3>Menu</h3>
+    <nav class="menu">
+        <ul>
+            <li><a href="WS1.html">Accueil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="inscription.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <hr>
+
+    <h1>Créez un compte</h1>
+
+    <h2>Formulaire d'inscription</h2>
+<!-- POST pour info sensible et GET pour alle plus vite mais moins secure -->
+    <form action="" method="POST">
+        
+        <div>
+            <label for="civilite">Civilité :</label>
+            <select name="civilite" id="civilite">
+                <option value="monsieur">Monsieur</option>
+                <option value="madame">Madame</option>
+            </select>
+        </div>
+        <br>
+
+        <div>
+            <label for="nom">Nom :</label>
+            <input type="text" name="nom" id="nom" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="prenom">Prénom :</label>
+            <input type="text" name="prenom" id="prenom" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="email">Courriel :</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="mdp">Mot de passe (min 8 car.) :</label>
+            <input type="password" name="mdp" id="mdp" minlength="8" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="mdp_confirm">Confirmation :</label>
+            <input type="password" name="mdp_confirm" id="mdp_confirm" minlength="8" required>
+        </div>
+        <br>
+
+        <div>
+            <input type="submit" value="Envoyer">
+            <input type="reset" value="Réinitialiser">
+        </div>
+
+    </form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
