@@ -1,9 +1,8 @@
 :root {
-    /* Je stocke tes couleurs ici pour les changer facilement partout */
     --main-orange: #f66b01;
-    --bg-black: #121212;       /* Un noir très profond mais pas absolu (plus doux) */
-    --bg-light-black: #1E1E1E; /* Le "noir un peu clair" pour les blocs */
-    --text-white: #e0e0e0;     /* Blanc cassé (moins agressif pour les yeux) */
+    --bg-black: #121212;
+    --bg-light-black: #1E1E1E;
+    --text-white: #e0e0e0;
 }
 
 * {
@@ -15,79 +14,86 @@
 body {
     background-color: var(--bg-black);
     color: var(--text-white);
-    font-family: 'Century Gothic', sans-serif; /* Tu pourras remettre 'Poppins' ici si tu l'importes */
+    font-family: 'Century Gothic', sans-serif;
     line-height: 1.5;
 }
 
 /* --- 2. MISE EN PAGE (CONTAINER) --- */
 .page-container {
-    max-width: 1200px; /* Limite la largeur pour ne pas que ça s'étale trop sur grand écran */
-    margin: 0 auto;    /* Centre tout le site au milieu de l'écran */
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
     font-family: "Century Gothic",sans-serif; 
 }
 
 
 .main-header {
-    display: flex;             /* Active le mode Flexbox */
-    justify-content: center;   /* CENTRE le groupe (Logo + Texte) horizontalement sur la page */
-    align-items: center;       /* CENTRE le texte verticalement (à la hauteur du milieu du logo) */
-    
-    gap: 20px;                 /* Espace entre le logo et le texte */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
     margin-bottom: 30px;
     border-bottom: 2px solid var(--main-orange);
     padding-bottom: 20px;
 }
 
 .logo {
-    width: 150px;               /* On fixe une taille propre */
+    width: 150px;
     height: auto;
     margin : 0;
-    /* Plus besoin de padding-left 500px ! Flexbox s'occupe de l'alignement */
 }
 
 .header-text h1 {
     color: var(--main-orange);
     font-size: 1.8rem;
-    text-transform: uppercase; /* Met le titre en majuscules */
+    text-transform: uppercase;
     text-align: left; 
     margin:0;
 }
 
 /* --- 4. NAVIGATION (MENU) --- */
-.main-menu {
-    background-color: var(--bg-light-black); /* Fond gris foncé */
-    padding: 15px;
-    border-radius: 8px;        /* Coins arrondis */
+.text-center {
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+.navbar {
+    padding: 10px 15px;
+    font-family: 'Century Gothic', sans-serif;
+    background-color: var(--bg-light-black);
+    width: 100%;
     margin-bottom: 30px;
-    display : flex;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
     justify-content: center;
-    width : 100%;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
 }
 
-.main-menu ul {
-    list-style: none;          /* Enlève les puces (points) */
-    display: flex;             /* Met les liens à l'horizontale */
-    justify-content: center;   /* Centre les liens */
-    align-items: center;
-    gap: 40px;                 /* Espace entre chaque lien */
-    flex-wrap: wrap;           /* Permet de passer à la ligne sur mobile */
-    margin : 0;
-    padding : 0;
-}
-
-
-.main-menu a {
-    text-decoration: none;     /* Enlève le soulignement moche */
+/* 3. Les liens */
+.navbar a {
     color: white;
-    font-weight: bold;
+    text-decoration: none;
     font-size: 1.1rem;
-    transition: color 0.4s;    /* Animation douce */
+    transition: 0.5s;
 }
 
-.main-menu li{
-    margin : 0 15px;
 
+.navbar a:hover {
+    text-decoration: underline; 
+    color: var(--main-orange); /* Petit bonus design : ça devient orange */
+}
+/* 4. L'élément actif (Consigne span + classe) */
+.active {
+    font-weight: bold;       /* Consigne : Gras */
+    color: var(--main-orange) !important; /* Ton orange pour indiquer la page active */
+    text-decoration: none;   /* Pas de soulignement forcé ici, juste la couleur */
 }
 
 /* Effet quand on passe la souris sur un lien */
@@ -148,6 +154,8 @@ body {
     border-top: 1px solid #333;
     padding-top: 20px;
     color: #888; /* Texte*/
+    font-style : italic;
+    font-size: 1em;
 }
 
 
