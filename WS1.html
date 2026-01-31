@@ -1,65 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HEADER</title>
+    <title>Accueil</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <img src="\assets\logo.png" alt = "logo Leboncoin">
 
-
-
-
-    <header>
-        <h1>Corbeille boucle 1 / Les différentes balises :</h1>
-        <hr>
+    <header class="main-header">
+        <img src="assets/logo.png" alt="logo Leboncoin" class="logo">
+        <div class="header-text">
+            <h1>Corbeille boucle 1 / Les différentes balises :</h1>
+            <hr>
+        </div>
     </header>
 
-    <nav class="menu">
+    <nav class="main-menu">
         <ul>
             <li><a href="WS1.html">Accueil</a></li>
             <li><a href="a-propos.html">À propos</a></li>
-            <li><a href="inscription.html">Contact</a></li>
+            <li><a href="inscription.html">Inscription</a></li>
+            <li><a href="connexion.html">Connexion</a></li>
+            <li><a href="avis.html">Avis</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <aside>
-        <h2>Ceci est un aside</h2>
-        <p>Sur le coté <cite>droite ou gauche</cite> de la fenetre</p>
-    </aside>
+    <div class="page-container">
 
-    <main>
+        <div class="content-wrapper">
 
-        <article class="class1">
-            
-            <header>
-                <h2>Test article</h2>
-            </header>
+            <aside class="sidebar">
+                <h2>Ceci est un aside</h2>
+                <p>Sur le coté <cite>droite ou gauche</cite> de la fenetre</p>
+            </aside>
 
-            <figure>
-                <h2>Ceci est une div (devenue figure)</h2>
-                <p>I m the ultimate Joker ! If i dont know what i want or if i ve not balise</p>
-            </figure>
+            <main class="main-content">
 
-            <p>Je suis un peu comme la section mais pas trop</p>
+                <article class="card">
+                    <header class="card-header">
+                        <h2>Test article</h2>
+                    </header>
 
-            <footer></footer>
-        
-        </article>
+                    <figure class="joker-box">
+                        <h2>Ceci est une div (devenue figure)</h2>
+                        <p>I m the ultimate Joker ! If i dont know what i want or if i ve not balise</p>
+                    </figure>
 
-        <section>
-            <h2>Ceci est une section</h2>
-            <p>Je suis un peu comme l'article mais pas trop</p>
-        </section>
+                    <p>Je suis un peu comme la section mais pas trop</p>
+                    <footer class="card-footer"></footer>
+                </article>
 
-    </main>
+                <section class="info-section">
+                    <h2>Ceci est une section</h2>
+                    <p>Je suis un peu comme l'article mais pas trop</p>
+                </section>
 
-    <footer>
+            </main>
+        </div> </div> 
+    <footer class="main-footer">
         <aside>
-            <h2>Ceci est un aside</h2>
+            <h2>Ceci est un footer</h2>
         </aside>
-        <p>Aside mais en bas ( foot)</p>
+        <p>Aside mais en bas (foot)</p>
     </footer>
 
 </body>

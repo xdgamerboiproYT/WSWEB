@@ -1,12 +1,13 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
             <header class="main-header">
             <img src="assets/logo.png" alt="logo Leboncoin" class="logo">
             
@@ -15,7 +16,6 @@
                 <hr>
             </div>
         </header>
-
     <nav class="main-menu">
         <ul>
             <li><a href="WS1.html">Accueil</a></li>
@@ -26,19 +26,34 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    
+    <hr>
 
-    <h2>Cesi</h2>
-    <h3>Spé</h3>
-    <ul><p>IA</p></ul>
-    <ul><p>Cyber</p></ul>
+    <h1>Bonjour !</h1>
 
+    <h2>Formulaire de connexion</h2>
 
+    <form action="" method="POST">
+        
+        <div>
+            <label for="email">Courriel :</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <br>
 
-    <h2>UTBM</h2>
-    <h3>spé</h3>
-    <ul><p>IA</p></ul>
-    <ul><p>VR</p></ul>
+        <div>
+            <label for="mdp">Mot de passe :</label>
+            <input type="password" name="mdp" id="mdp" required>
+        </div>
+        <br>
 
+        <div>
+            <input type="submit" value="Connexion">
+            
+            <input type="reset" value="Effacer">
+        </div>
+
+    </form>
         <footer class="main-footer">
             <aside>
                 <h2>Ceci est un footer</h2>
@@ -46,6 +61,6 @@
             <p>Aside mais en bas (foot)</p>
         </footer>
 
-        
+
 </body>
 </html>

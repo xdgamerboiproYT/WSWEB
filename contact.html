@@ -1,13 +1,13 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-            <header class="main-header">
+        <header class="main-header">
             <img src="assets/logo.png" alt="logo Leboncoin" class="logo">
             
             <div class="header-text">
@@ -15,7 +15,6 @@
                 <hr>
             </div>
         </header>
-
     <nav class="main-menu">
         <ul>
             <li><a href="WS1.html">Accueil</a></li>
@@ -26,26 +25,37 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    <hr>
 
-    <h2>Cesi</h2>
-    <h3>Spé</h3>
-    <ul><p>IA</p></ul>
-    <ul><p>Cyber</p></ul>
+    <h1>Nous sommes à votre écoute</h1>
 
+    <h2>Vous avez la parole</h2>
 
+    <form action="" method="POST">
+        
+        <div>
+            <label for="nom">Nom complet :</label>
+            <input type="text" name="nom" id="nom" placeholder="Ex: Jean Dupont" required>
+        </div>
+        <br>
 
-    <h2>UTBM</h2>
-    <h3>spé</h3>
-    <ul><p>IA</p></ul>
-    <ul><p>VR</p></ul>
+        <div>
+            <label for="message">Votre message :</label><br>
+            <textarea name="message" id="message" rows="10" cols="50" placeholder="Écrivez votre message ici..." required></textarea>
+        </div>
+        <br>
 
+        <div>
+            <input type="submit" value="Envoyer">
+            <input type="reset" value="Effacer">
+        </div>
+
+    </form>
         <footer class="main-footer">
             <aside>
                 <h2>Ceci est un footer</h2>
             </aside>
             <p>Aside mais en bas (foot)</p>
         </footer>
-
-        
 </body>
 </html>

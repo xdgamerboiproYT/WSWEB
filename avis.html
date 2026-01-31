@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avis Client</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <header class="main-header">
+            <img src="assets/logo.png" alt="logo Leboncoin" class="logo">
+            
+            <div class="header-text">
+                <h1>Corbeille boucle 1 / Les différentes balises :</h1>
+                <hr>
+            </div>
+        </header>
+    <nav class="main-menu">
+        <ul>
+            <li><a href="WS1.html">Accueil</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="inscription.html">Inscription</a></li>
+            <li><a href="connexion.html">Connexion</a></li>
+            <li><a href="avis.html">Avis</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <hr>
+
+    <h1>Votre avis nous intéresse</h1>
+
+    <h2>Description</h2>
+
+    <form action="" method="POST" enctype="multipart/form-data">
+
+        <div>
+            <label for="nom">Nom complet :</label>
+            <input type="text" name="nom" id="nom" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="email">Courriel :</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="objet">Objet de la demande :</label>
+            <select name="objet" id="objet">
+                <option value="produit">Produit acheté</option>
+                <option value="commercial">Service commercial</option>
+                <option value="technique">Service technique</option>
+                <option value="autres">Autres</option>
+            </select>
+        </div>
+        <br>
+
+        <div>
+            <fieldset>
+            <legend>Catégories concernées :</legend>
+            
+            <input type="checkbox" id="immo" name="categorie" value="immobilier">
+            <label for="immo">Immobilier</label>
+            
+            <input type="checkbox" id="vehic" name="categorie" value="vehicules">
+            <label for="vehic">Véhicules</label>
+
+            <input type="checkbox" id="vet" name="categorie" value="vetements">
+            <label for="vet">Vêtements</label>
+
+            <input type="checkbox" id="multi" name="categorie" value="multimedia">
+            <label for="multi">Multimédia</label>
+
+            <input type="checkbox" id="maison" name="categorie" value="maison">
+            <label for="maison">Maison</label>
+
+            <input type="checkbox" id="loisirs" name="categorie" value="loisirs">
+            <label for="loisirs">Loisirs</label>
+
+            <input type="checkbox" id="serv" name="categorie" value="services">
+            <label for="serv">Services</label>
+            </fieldset>
+        </div>
+        <br>
+
+        <div>
+            <label for="photo">Joindre une photo du produit :</label>
+            <input type="file" name="photo" id="photo" accept="image/*">
+        </div>
+        <br>
+
+        <div>
+            <p>Êtes-vous satisfait ?</p>
+            
+            <input type="radio" id="oui" name="satisfaction" value="oui" checked>
+            <label for="oui">Satisfait</label>
+
+            <input type="radio" id="non" name="satisfaction" value="non">
+            <label for="non">Pas satisfait</label>
+        </div>
+        <br>
+<!-- il faut qu il ai le mm nom : satisfaction -->
+        <div>
+            <label for="message">Commentaires :</label><br>
+            <textarea name="message" id="message" rows="5" cols="40" placeholder="Votre message ici..."></textarea>
+        </div>
+        <br>
+
+        <div>
+            <input type="submit" value="Envoyer">
+            <input type="reset" value="Effacer">
+        </div>
+
+    </form>
+        <footer class="main-footer">
+            <aside>
+                <h2>Ceci est un footer</h2>
+            </aside>
+            <p>Aside mais en bas (foot)</p>
+        </footer>
+</body>
+</html>

@@ -1,0 +1,247 @@
+:root {
+    /* Je stocke tes couleurs ici pour les changer facilement partout */
+    --main-orange: #f66b01;
+    --bg-black: #121212;       /* Un noir très profond mais pas absolu (plus doux) */
+    --bg-light-black: #1E1E1E; /* Le "noir un peu clair" pour les blocs */
+    --text-white: #e0e0e0;     /* Blanc cassé (moins agressif pour les yeux) */
+}
+
+* {
+    box-sizing: border-box; /* Indispensable pour gérer les tailles correctement */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-black);
+    color: var(--text-white);
+    font-family: 'Century Gothic', sans-serif; /* Tu pourras remettre 'Poppins' ici si tu l'importes */
+    line-height: 1.5;
+}
+
+/* --- 2. MISE EN PAGE (CONTAINER) --- */
+.page-container {
+    max-width: 1200px; /* Limite la largeur pour ne pas que ça s'étale trop sur grand écran */
+    margin: 0 auto;    /* Centre tout le site au milieu de l'écran */
+    padding: 20px;
+    font-family: "Century Gothic",sans-serif; 
+}
+
+
+.main-header {
+    display: flex;             /* Active le mode Flexbox */
+    justify-content: center;   /* CENTRE le groupe (Logo + Texte) horizontalement sur la page */
+    align-items: center;       /* CENTRE le texte verticalement (à la hauteur du milieu du logo) */
+    
+    gap: 20px;                 /* Espace entre le logo et le texte */
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--main-orange);
+    padding-bottom: 20px;
+}
+
+.logo {
+    width: 150px;               /* On fixe une taille propre */
+    height: auto;
+    margin : 0;
+    /* Plus besoin de padding-left 500px ! Flexbox s'occupe de l'alignement */
+}
+
+.header-text h1 {
+    color: var(--main-orange);
+    font-size: 1.8rem;
+    text-transform: uppercase; /* Met le titre en majuscules */
+    text-align: left; 
+    margin:0;
+}
+
+/* --- 4. NAVIGATION (MENU) --- */
+.main-menu {
+    background-color: var(--bg-light-black); /* Fond gris foncé */
+    padding: 15px;
+    border-radius: 8px;        /* Coins arrondis */
+    margin-bottom: 30px;
+    display : flex;
+    justify-content: center;
+    width : 100%;
+}
+
+.main-menu ul {
+    list-style: none;          /* Enlève les puces (points) */
+    display: flex;             /* Met les liens à l'horizontale */
+    justify-content: center;   /* Centre les liens */
+    align-items: center;
+    gap: 40px;                 /* Espace entre chaque lien */
+    flex-wrap: wrap;           /* Permet de passer à la ligne sur mobile */
+    margin : 0;
+    padding : 0;
+}
+
+
+.main-menu a {
+    text-decoration: none;     /* Enlève le soulignement moche */
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.4s;    /* Animation douce */
+}
+
+.main-menu li{
+    margin : 0 15px;
+
+}
+
+/* Effet quand on passe la souris sur un lien */
+.main-menu a:hover {
+    color: var(--main-orange);
+}
+
+/* --- 5. STRUCTURE PRINCIPALE (ASIDE + MAIN) --- */
+.content-wrapper {
+    display: flex;             /* Met l'Aside et le Main côte à côte */
+    gap: 30px;                 /* Espace entre les deux colonnes */
+    align-items: flex-start;   /* Aligne les blocs en haut */
+    margin : 0 auto;
+}
+
+/* La colonne de gauche (Aside) */
+.sidebar {
+    flex: 1;                   /* Prend 1 part de largeur */
+    background-color: var(--bg-light-black);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid var(--main-orange); /* Bordure orange à gauche */
+}
+
+/* La colonne de droite (Main) */
+.main-content {
+    flex: 3;                   /* Prend 3 parts de largeur (donc 3x plus large que l'aside) */
+}
+
+/* --- 6. CARTES & SECTIONS --- */
+/* Style commun pour .card et .info-section */
+.card, .info-section {
+    background-color: var(--bg-light-black);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5); /* Ombre portée pour le relief */
+}
+
+.card h2, .info-section h2, .sidebar h2 {
+    color: var(--main-orange);
+    margin-bottom: 15px;
+}
+
+/* La boite "Joker" (Figure) */
+.joker-box {
+    background-color: #2a2a2a; /* Encore un peu plus clair pour différencier */
+    padding: 15px;
+    border: 1px dashed var(--main-orange); /* Bordure en pointillés */
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+/* --- 7. FOOTER --- */
+.main-footer {
+    margin-top: 50px;
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    color: #888; /* Texte*/
+}
+
+
+@media screen and (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+}
+
+
+
+/* --- 8. STYLES DES FORMULAIRES --- */
+
+/* On limite la largeur du formulaire pour qu'il soit élégant */
+.form-card {
+    max-width: 600px;
+    margin: 0 auto; /* Centre le formulaire lui-même */
+}
+
+/* Espacement entre chaque question */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Style des labels (le texte au-dessus des champs) */
+label {
+    display: block; /* Force le label à être au-dessus de l'input */
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-white);
+}
+
+/* Style des champs de saisie (Inputs et Select) */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;             /* Prend toute la largeur disponible */
+    padding: 12px;           /* Espace à l'intérieur du champ */
+    background-color: #2a2a2a; /* Fond gris foncé (plus clair que le noir) */
+    border: 1px solid #444;    /* Bordure discrète */
+    border-radius: 5px;      /* Coins arrondis */
+    color: white;            /* Texte blanc quand on écrit */
+    font-family: inherit;      /* Garde la police du site */
+    font-size: 1rem;
+    transition: 0.3s;        /* Animation douce */
+}
+
+/* Quand on clique dans le champ */
+input:focus, select:focus, textarea:focus {
+    outline: none;           /* Enlève le cadre bleu moche par défaut */
+    border-color: var(--main-orange); /* La bordure devient orange ! */
+    background-color: #333;
+}
+
+/* --- BOUTONS --- */
+.form-actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+/* Bouton Envoyer */
+input[type="submit"] {
+    background-color: var(--main-orange);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    flex: 1; /* Prend la place disponible */
+}
+
+input[type="submit"]:hover {
+    background-color: #d65b00; /* Orange un peu plus foncé au survol */
+}
+
+/* Bouton Réinitialiser */
+input[type="reset"] {
+    background-color: #444;
+    color: #ccc;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+input[type="reset"]:hover {
+    background-color: #666;
+    color: white;
+}
