@@ -111,16 +111,17 @@ body {
 
 /* La colonne de gauche (Aside) */
 .sidebar {
-    flex: 1;                   /* Prend 1 part de largeur */
+    flex: 1;/*largeur */
     background-color: var(--bg-light-black);
     padding: 20px;
     border-radius: 10px;
-    border-left: 4px solid var(--main-orange); /* Bordure orange à gauche */
+    border-left: 4px solid var(--main-orange);
+    /* height: 800; */
 }
 
 /* La colonne de droite (Main) */
 .main-content {
-    flex: 3;                   /* Prend 3 parts de largeur (donc 3x plus large que l'aside) */
+    flex: 3;                
 }
 
 /* --- 6. CARTES & SECTIONS --- */
@@ -252,4 +253,230 @@ input[type="reset"] {
 input[type="reset"]:hover {
     background-color: #666;
     color: white;
+}
+
+
+
+
+/* --- PARTIE 3 : LISTES ET TABLEAUX --- */
+
+/* 1. La Liste des catégories */
+.categories-list {
+    list-style: none; /* Consigne : Supprimer les puces */
+    padding: 0;
+    margin: 0;
+}
+
+.categories-list li {
+    display: inline-block; /* Consigne : Mettre côte-à-côte */
+}
+
+.categories-list a {
+    text-decoration: none;
+    color: var(--text-white); /* Couleur par défaut */
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.categories-list a:hover {
+    color: var(--main-orange);
+}
+
+/* Consigne : Ajouter un séparateur " - " pour chaque élément... */
+.categories-list li::after {
+    content: " - ";          /* On insère le tiret via CSS */
+    color: var(--main-orange);
+    margin: 0 5px;           /* Un peu d'espace autour du tiret */
+}
+
+/* ...SAUF pour le dernier ! */
+.categories-list li:last-child::after {
+    content: "";             /* On vide le contenu pour le dernier */
+    /* ou display: none; */
+}
+
+
+/* 2. Le Tableau des derniers articles */
+.articles-table {
+    width: 100%;             /* Prend toute la largeur de la carte */
+    border-collapse: collapse; /* Colle les bordures entre elles */
+    border: none;            /* Consigne : Pas de bordure extérieure */
+    margin-top: 15px;
+}
+
+/* L'entête (Header) */
+.articles-table th {
+    background-color: black; /* Consigne : Fond noir */
+    color: white;            /* Consigne : Texte blanc */
+    padding: 15px;
+    text-align: left;        /* Aligne le texte à gauche */
+}
+
+/* Les cellules normales */
+.articles-table td {
+    padding: 12px;
+    color: var(--text-white);
+}
+
+/* Consigne : Une ligne sur deux d'une autre couleur */
+/* J'utilise une couleur gris foncé (plus clair que le fond) pour que ce soit lisible */
+.articles-table tr:nth-child(even) {
+    background-color: #2a2a2a; 
+}
+
+/* Bonus : petit effet au survol de la ligne */
+.articles-table tr:hover {
+    background-color: #333;
+    cursor: pointer;
+}
+
+
+/* --- PARTIE 4 : PAGE À PROPOS (FLEXBOX) --- */
+
+/* 1. Le conteneur parent qui aligne les enfants */
+.flex-row {
+    display: flex;       /* Active le mode Flexbox */
+    gap: 20px;           /* Espace entre les deux boîtes */
+    margin-bottom: 20px; /* Espace sous la ligne */
+}
+
+/* 2. Les enfants (les colonnes) */
+.flex-col {
+    flex: 1;             /* MAGIQUE : Dit aux deux blocs de prendre chacun 50% de la place (partage équitable) */
+    margin-bottom: 0;    /* On retire la marge du bas car c'est géré par le parent */
+}
+
+/* RESPONSIVE (Bonus) : Sur mobile, on remet les blocs l'un sous l'autre */
+@media (max-width: 768px) {
+    .flex-row {
+        flex-direction: column;
+    }
+}
+
+
+/* --- PARTIE 5 : FORMULAIRES MODERNES --- */
+
+/* Conteneur du formulaire (la carte grise) */
+.form-card {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--bg-light-black);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* LABELS : Style "Leboncoin" (Petit, Orange, Majuscule) */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--main-orange); /* Comme sur ta capture */
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-family: 'Century Gothic', sans-serif;
+}
+
+/* CHAMPS DE SAISIE (Input, Select, Textarea) */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 15px;        /* Consigne : Marge interne (padding) */
+    border: none;              /* Consigne : Retirer les bordures */
+    border-radius: 8px;        /* Consigne : Bords arrondis */
+    background-color: #2a2a2a; /* Fond sombre pour le contraste */
+    color: white;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    outline: none;             /* Enlève le trait bleu moche au clic */
+}
+
+/* Focus : Petit effet quand on clique dedans */
+input:focus, select:focus, textarea:focus {
+    background-color: #333;
+    box-shadow: 0 0 0 2px var(--main-orange); /* Fausse bordure orange propre */
+}
+
+/* TEXTAREA (Consigne : Enlever le redimensionnement) */
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+/* LISTE DÉROULANTE (Select) */
+select {
+    cursor: pointer;
+    appearance: none; /* (Optionnel) Pour un look plus plat sur certains navigateurs */
+}
+
+/* CASES À COCHER (Checkboxes) & RADIOS */
+.checkbox-group label, .radio-group label {
+    display: inline-block;
+    color: var(--text-white); /* Texte blanc pour les options */
+    text-transform: none;     /* Pas de majuscule pour les options */
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 5px;
+    transform: scale(1.2); /* Grossit un peu les cases */
+    cursor: pointer;
+}
+
+/* INPUT FICHIER (File) */
+input[type="file"] {
+    background-color: transparent;
+    padding: 0;
+}
+
+/* --- BOUTONS (Consigne : 2 styles différents) --- */
+.form-actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+}
+
+/* Style 1 : BOUTON SOUMETTRE (Orange plein) */
+input[type="submit"], button[type="submit"] {
+    background-color: var(--main-orange);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #d65b00;
+}
+
+/* Style 2 : BOUTON RÉINITIALISER (Blanc/Gris avec bordure) */
+input[type="reset"] {
+    background-color: white;   /* Consigne : Différencier */
+    color: black;
+    border: 1px solid #ccc;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+input[type="reset"]:hover {
+    background-color: #e0e0e0;
 }
