@@ -3,14 +3,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
     <header>
+        <div class="text-center">
         <img src="images/logo.webp" alt="Logo Lebonplan">
-        <nav>
+        </div>
+        <nav class="navbar">
             <ul>
-                <li><a href="site.html">Accueil</a></li>
-                <li><a href="a-propos.html">À propos</a></li>
+                <li><a href="site.html" >Accueil</a></li>
+                <li><a href="a-propos.html" class ="active">À propos</a></li>
                 <li><a href="inscription.html">Inscription</a></li>
                 <li><a href="connexion.html">Connexion</a></li>
                 <li><a href="avis.html">Avis</a></li>
@@ -20,11 +23,24 @@
     </header>
 
 <main>
-    <hr>
-    <h1> Qui sommes nous?</h1>
-    <h2>Histoire</h2>
-    <hr><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum vel ante in pharetra. In magna est, imperdiet luctus iaculis sed, viverra vitae felis.</p>
-</hr>
+    <h1 class="text-center">Qui sommes-nous ?</h1>
+    
+    <div class="flex-container">
+        <div class="flex-item border-box">
+            <h2>Histoire</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.</p>
+        </div>
+
+        <div class="flex-item border-box">
+            <h2>Nos engagements</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.</p>
+        </div>
+    </div>
+
+    <div class="full-width border-box">
+        <h2>Une satisfaction client reconnue</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id.</p>
+    </div>
 </main>
  <footer>
         <p>&copy; 2026 Lebonplan - Tous droits réservés</p>

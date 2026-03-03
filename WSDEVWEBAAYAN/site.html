@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Lebonplan - Accueil</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
     <header>
+        <div class="text-center">
         <img src="images/logo.webp" alt="Logo Lebonplan">
-        <nav>
-            <ul>
-                <li><a href="site.html">Accueil</a></li>
+        </div>
+        <nav class="navbar">
+            <ul >
+                <li><a href="site.html" class ="active">Accueil</a></li>
                 <li><a href="a-propos.html">À propos</a></li>
                 <li><a href="inscription.html">Inscription</a></li>
                 <li><a href="connexion.html">Connexion</a></li>
@@ -24,11 +27,41 @@
     <main>
         <h1>Bienvenue sur Lebonplan</h1>
         <section>
-            <h2>Nos dernières annonces</h2>
-            <article>
-                <h3>Vélo de course</h3>
-                <p>À vendre vélo très bon état...</p>
-            </article>
+            <h2>Categories</h2>
+            <ul class="category-list">
+                <li>immobilier</li>
+                <li>Véhicules</li>
+                <li>vetements</li>
+                <li>Multimedia</li>
+                <li>Maison</li>
+                <li>Loisirs</li>
+                <li>Services</li>
+            </ul>
+            <h2>derniers articles ajouter</h2>
+            <table>
+    <thead>
+        <tr>
+            <th>Intitulé</th>
+            <th>Localisation</th>
+            <th>Vendeur</th>
+            <th>Prix</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Maison Lumineuse 120m²</td>
+            <td>Saint-Nazaire</td>
+            <td>Stéphane Plaza</td>
+            <td>230 000€</td>
+        </tr>
+        <tr>
+            <td>Volkswagen Polo 1.2 TSI Edition</td>
+            <td>Nanterre</td>
+            <td>Michael Schumacher</td>
+            <td>15 000€</td>
+        </tr>
+    </tbody>
+</table>
         </section>
     </main>
 
